@@ -1,6 +1,7 @@
 const stringLength = require('./modules/stringLength');
 const reverseString = require('./modules/reverseString');
 const Calculator = require('./modules/calculator');
+const capitalizeString = require('./modules/capitaliseString');
 
 // unit tests for string length method
 test('Function created should return the correct length of the string', () => {
@@ -82,5 +83,17 @@ describe('Division', () => {
     expect(() => calculator.divide(34, 0)).toThrow(
       'Sorry the denominator cannot be zero'
     );
+  });
+});
+
+// write styles for capitalize string method
+
+describe('capitalize string', () => {
+  test('empty string should return empty string ', () => {
+    expect(capitalizeString('')).toBe('');
+  });
+
+  test('should return first letter capitalized', () => {
+    expect(capitalizeString('shrute')).toBe('Shrute');
   });
 });
